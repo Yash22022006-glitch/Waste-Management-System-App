@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Smart Waste Management System",
+  "description": "A React web application for real-time monitoring and management of urban waste bins using IoT data, including authentication, bin status, map visualization, notifications, and AI-powered report summarization.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

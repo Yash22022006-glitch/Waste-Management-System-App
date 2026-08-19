@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #f8fafc; /* light blue-gray background */
+  --surface: #ffffff;
+  --surface-accent: #f1f5f9;
+  --primary: #2563eb; /* blue-600 */
+  --primary-glow: rgba(37, 99, 235, 0.08);
+  --text-main: #0f172a; /* slate-900 */
+  --text-muted: #64748b; /* slate-500 */
+  --border: rgba(15, 23, 42, 0.08); /* subtle tech border */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden; /* We'll handle scrolling in specific containers */
+}
+
+/* Hide scrollbars globally but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mission Control Aesthetics - Light Mode */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Grid Background - Light Mode */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
